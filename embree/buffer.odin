@@ -23,7 +23,7 @@ RTCBufferType :: enum c.int {
     FLAGS = 32,
 }
 
-foreign import embree "embree4.lib"
+foreign import embree "lib/embree4.lib"
 foreign embree{
     @(link_name="rtcNewBuffer")
     rtcNewBuffer :: proc(device: RTCDevice, byteSize: c.size_t) -> RTCBuffer ---

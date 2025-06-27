@@ -147,7 +147,7 @@ RTCGrid :: struct {
 }
 
 // Foreign function declarations (prototypes only, no implementation)
-foreign import embree "embree4.lib"
+foreign import embree "lib/embree4.lib"
 foreign embree {
     @(link_name="rtcNewGeometry")
     rtcNewGeometry :: proc(device: RTCDevice, type: RTCGeometryType) -> RTCGeometry ---
@@ -214,7 +214,7 @@ foreign embree {
 
     @(link_name="rtcSetGeometryOccludedFilterFunction")
     rtcSetGeometryOccludedFilterFunction :: proc(geometry: RTCGeometry, filter: RTCFilterFunctionN) ---
-  
+
     @(link_name="rtcSetGeometryEnableFilterFunctionFromArguments")
     rtcSetGeometryEnableFilterFunctionFromArguments :: proc(geometry: RTCGeometry, enable: bool) ---
 

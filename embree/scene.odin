@@ -47,7 +47,7 @@ RTCCollision :: struct {
 RTCCollideFunc :: #type proc "c" (userPtr: rawptr, collisions: ^RTCCollision, num_collisions: u32)
 
 // Foreign function declarations
-foreign import embree "embree4.lib"
+foreign import embree "lib/embree4.lib"
 foreign embree {
     @(link_name="rtcNewScene")
     rtcNewScene :: proc(device: RTCDevice) -> RTCScene ---

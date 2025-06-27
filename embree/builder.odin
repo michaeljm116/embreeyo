@@ -60,7 +60,7 @@ RTCBuildArguments :: struct {
 }
 
 // Foreign function declarations
-foreign import embree "embree4.lib"
+foreign import embree "lib/embree4.lib"
 foreign embree {
     @(link_name="rtcNewBVH")
     rtcNewBVH :: proc(device: RTCDevice) -> RTCBVH ---
