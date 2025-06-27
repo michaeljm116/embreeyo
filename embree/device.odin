@@ -48,6 +48,7 @@ RTCErrorFunction :: #type proc "c" (userPtr: rawptr, code: RTCError, str: cstrin
 RTCMemoryMonitorFunction :: #type proc "c" (ptr: rawptr, bytes: c.ssize_t, post: bool) -> bool
 
 foreign import embree "lib/embree4.lib"
+foreign import tbb "lib/tbb12.lib"
 foreign embree{
     @(link_name="rtcNewDevice")
     rtcNewDevice :: proc(config: cstring) -> RTCDevice ---
